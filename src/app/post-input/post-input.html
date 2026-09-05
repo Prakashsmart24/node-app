@@ -1,1 +1,12 @@
-<p>post-input works!</p>
+<form #postInput="ngForm" (ngSubmit)="onAddPost(postInput)" class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Favorite food</mat-label>
+    <input matInput ngModel required name="title" placeholder="Ex. Pizza" value="Sushi" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput required ngModel name="content" placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+  <button matButton="filled" type="submit">Create</button>
+</form>
