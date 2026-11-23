@@ -1,12 +1,24 @@
-<form #postInput="ngForm" (ngSubmit)="onAddPost(postInput)" class="example-form">
+<form #postInput="ngForm" (ngSubmit)="onSavePost(postInput)" class="example-form">
   <mat-form-field class="example-full-width">
     <mat-label>Favorite food</mat-label>
-    <input matInput ngModel required name="title" placeholder="Ex. Pizza" value="Sushi" />
+    <input matInput name="title" [ngModel]="post?.title" required placeholder="Ex. Pizza"/>
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
     <mat-label>Leave a comment</mat-label>
-    <textarea matInput required ngModel name="content" placeholder="Ex. It makes me feel..."></textarea>
+    <textarea
+      matInput
+      required
+      name="content"
+      [ngModel]="post?.content"
+      placeholder="Ex. It makes me feel..."
+    ></textarea>
   </mat-form-field>
-  <button matButton="filled" type="submit">Create</button>
+  <button matButton="filled" type="submit">
+     @if (isSaving) {
+    <mat-spinner diameter="20" color="red" aria-label="Saving post"></mat-spinner>
+  } @else {
+    Save Post
+  }
+  </button>
 </form>

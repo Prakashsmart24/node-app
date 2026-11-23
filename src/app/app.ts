@@ -1,10 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { PostHeader } from './post-header/post-header';
-import { PostInput } from './post-input/post-input';
-import { PostList } from './post-list/post-list';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [PostHeader,PostInput,PostList],
+  imports: [PostHeader,RouterOutlet],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',

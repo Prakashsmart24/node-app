@@ -8,3 +8,7 @@
 .example-full-width {
     width: 100%;
 }
+
+mat-spinner {
+  --mat-progress-spinner-active-indicator-color: white;
+}

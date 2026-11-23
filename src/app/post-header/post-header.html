@@ -2,9 +2,10 @@
   <span>My App</span>
 
   <span class="example-spacer"></span>
-
-  <a mat-button>Home</a>
-  <a mat-button>Products</a>
-  <a mat-button>Pricing</a>
-  <a mat-button>About</a>
+   <a mat-button routerLink="/posts" routerLinkActive="active-link" ariaCurrentWhenActive="page"
+    >Post list</a
+  >
+  <a mat-button routerLink="/new-post" routerLinkActive="active-link" ariaCurrentWhenActive="page"
+    >Add post</a
+  >
 </mat-toolbar>
